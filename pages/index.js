@@ -102,6 +102,14 @@ export default function Home() {
           music.currentTime = 0;
           music.play();
           p.classList.remove("user-input");
+        } else if (ltr.toLowerCase() == "c") {
+          sentIndex.current = 0;
+          charIndex.current = 0;
+          setTimeout(() => {
+            type(redirecting);
+          }, typeSpeed * 2);
+          router.push("/contact");
+          p.classList.remove("user-input");
         }
         if (ltr.toLowerCase() == "backspace") {
           p.classList.remove("value-received");

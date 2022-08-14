@@ -1,0 +1,76 @@
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+.contact {
+  &__section {
+    padding: 2rem;
+    &--left {
+      font-size: 0.8rem;
+      background: $primary-clr;
+      padding: 3rem;
+      &__box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+        .icon {
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          background: white;
+          color: $bg-light;
+          font-size: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &--right {
+      background: $bg-light;
+      form {
+        .input-field {
+          margin-bottom: 30px;
+          .form-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+          }
+          .form-input {
+            display: block;
+            width: 100%;
+            padding: 1em;
+            background: $bg-clr;
+            border: none;
+            border-bottom: 2px solid $primary-clr;
+            outline: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: 0.8rem;
+            &.form-textarea {
+              resize: vertical;
+              height: 200px;
+            }
+          }
+        }
+        .submit {
+          padding: 0.5em 1em;
+          border: none;
+          outline: none;
+          font-family: inherit;
+          cursor: pointer;
+          transition: 200ms ease-in-out;
+          background: $primary-clr;
+          color: white;
+          border: 1px solid $primary-clr;
+        }
+      }
+    }
+  }
+  @include mq(xl) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
