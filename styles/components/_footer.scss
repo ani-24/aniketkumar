@@ -1,0 +1,26 @@
+@use "./../variables/" as *;
+
+.footer {
+  .container {
+    border-top: 1px solid #ffffff20;
+    padding: 3em 0;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    list-style: none;
+  }
+  .links-list {
+    justify-content: space-around;
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        transition: 100ms ease-in-out;
+        &:hover {
+          color: $primary-clr;
+        }
+      }
+    }
+  }
+}
