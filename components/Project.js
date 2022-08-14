@@ -34,11 +34,11 @@ const Project = ({ img, title, link, skills }) => {
         </a>
         <p>Skills used:</p>
         <div className="project__text__skills">
-          {skills.map((skill) => {
-            console.log(skillsName[skill]);
+          {skills.map((skill, index) => {
             return (
               <div
                 className={`project__text__skills__skill project__text__skills__skill--${skill}`}
+                key={index}
               >
                 {skillsName[skill]}
               </div>

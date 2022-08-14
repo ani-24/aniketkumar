@@ -23,8 +23,9 @@ const projects = () => {
       <Navbar />
       <div className="projects">
         <div className="container">
-          {Projects.map((proj) => (
+          {Projects.map((proj, index) => (
             <Project
+              key={index}
               img={proj.img}
               title={proj.title}
               link={proj.link}
