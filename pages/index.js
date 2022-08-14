@@ -33,6 +33,8 @@ const skills = [
   "'s' for skills, 'p' for projects, 'a' to know more about me, or 'c' to contact me",
 ];
 
+const redirecting = ["Redirecting..."];
+
 const isTouchDevice = () => {
   if (typeof window !== "undefined") {
     return (
@@ -47,7 +49,6 @@ export default function Home() {
   const terminalRef = useRef(null);
   const charIndex = useRef(0);
   const sentIndex = useRef(0);
-  const start = useRef(false);
   let music;
   const typeSpeed = 80;
   const router = useRouter();
@@ -85,7 +86,13 @@ export default function Home() {
       terminalRef.current.appendChild(p);
       const task = (ltr) => {
         if (ltr.toLowerCase() == "p") {
-          router.push("/projects");
+          sentIndex.current = 0;
+          charIndex.current = 0;
+          setTimeout(() => {
+            type(redirecting);
+            router.push("/projects");
+          }, typeSpeed * 2);
+          p.classList.remove("user-input");
         } else if (ltr.toLowerCase() == "s") {
           sentIndex.current = 0;
           charIndex.current = 0;
@@ -94,6 +101,7 @@ export default function Home() {
           }, typeSpeed * 2);
           music.currentTime = 0;
           music.play();
+          p.classList.remove("user-input");
         }
         if (ltr.toLowerCase() == "backspace") {
           p.classList.remove("value-received");
@@ -118,37 +126,41 @@ export default function Home() {
         });
       } else {
         window.addEventListener("keydown", (key) => {
-          task(key.key);
+          if (p.classList.contains("user-input")) {
+            task(key.key);
+          }
         });
       }
     }
   };
   useEffect(() => {
     music = new Audio("./typing.wav");
+    let start = false;
     if (!isTouchDevice()) {
-      if (!start.current) {
-        terminalRef.current.innerHTML =
-          "<p class='blink'>Press space to continue</p>";
-        window.addEventListener("keydown", (key) => {
+      terminalRef.current.innerHTML =
+        "<p class='blink'>Press space to continue</p>";
+      window.addEventListener("keydown", (key) => {
+        if (!start) {
           if (key.key === " ") {
             type(introduction);
             terminalRef.current.innerHTML = "";
             music.play();
-            start.current = true;
+            start = true;
           }
-        });
-      }
+        }
+      });
     } else {
-      if (!start.current) {
-        terminalRef.current.innerHTML =
-          "<p class='blink'>Touch the screen to continue</p>";
-        window.addEventListener("click", () => {
+      console.log(start);
+      terminalRef.current.innerHTML =
+        "<p class='blink'>Touch the screen to continue</p>";
+      window.addEventListener("click", () => {
+        if (!start) {
           type(introduction);
           terminalRef.current.innerHTML = "";
           music.play();
-          start.current = true;
-        });
-      }
+          start = true;
+        }
+      });
     }
   }, []);
 
