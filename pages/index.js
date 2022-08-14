@@ -33,7 +33,7 @@ const skills = [
   "'s' for skills, 'p' for projects, 'a' to know more about me, or 'c' to contact me",
 ];
 
-const redirecting = ["..."];
+const redirecting = ["......."];
 
 const isTouchDevice = () => {
   if (typeof window !== "undefined") {
