@@ -88,10 +88,13 @@ export default function Home() {
         if (ltr.toLowerCase() == "p") {
           sentIndex.current = 0;
           charIndex.current = 0;
-          setTimeout(() => {
-            type(redirecting);
-            router.push("/projects");
-          }, typeSpeed * 2);
+          setTimeout(
+            () => {
+              type(redirecting);
+            },
+            typeSpeed * 2,
+            router.push("/projects")
+          );
           p.classList.remove("user-input");
         } else if (ltr.toLowerCase() == "s") {
           sentIndex.current = 0;
