@@ -28,6 +28,7 @@ const projects = () => {
                 className="project__text__btn"
                 href="https://paceinstitute.vercel.app/"
                 target="_blank"
+                rel="noreferrer"
               >
                 View Live
               </a>
@@ -74,6 +75,7 @@ const projects = () => {
                 className="project__text__btn"
                 href="https://satyadevurology.vercel.app/"
                 target="_blank"
+                rel="noreferrer"
               >
                 View Live
               </a>
