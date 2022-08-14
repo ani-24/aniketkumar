@@ -14,12 +14,7 @@ const Project = ({ img, title, link, skills }) => {
     <div className="project">
       <div className="project__img">
         <a href={link} target="_blank" rel="noreferrer">
-          <Image
-            src={img}
-            alt="Pace Institute"
-            layout="fill"
-            objectFit="cover"
-          />
+          <Image src={img} alt={title} layout="fill" objectFit="cover" />
         </a>
       </div>
       <div className="project__text">
