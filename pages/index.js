@@ -47,7 +47,7 @@ export default function Home() {
   const terminalRef = useRef(null);
   const charIndex = useRef(0);
   const sentIndex = useRef(0);
-  let start = false;
+  const start = useRef(false);
   let music;
   const typeSpeed = 80;
   const router = useRouter();
@@ -87,8 +87,6 @@ export default function Home() {
         if (ltr.toLowerCase() == "p") {
           router.push("/projects");
         } else if (ltr.toLowerCase() == "s") {
-          p.classList.add("value-received");
-          p.innerHTML = ltr;
           sentIndex.current = 0;
           charIndex.current = 0;
           setTimeout(() => {
@@ -96,6 +94,13 @@ export default function Home() {
           }, typeSpeed * 2);
           music.currentTime = 0;
           music.play();
+        }
+        if (ltr.toLowerCase() == "backspace") {
+          p.classList.remove("value-received");
+          p.innerHTML = "";
+        } else {
+          p.classList.add("value-received");
+          p.innerHTML = ltr;
         }
       };
       if (isTouchDevice()) {
@@ -121,7 +126,7 @@ export default function Home() {
   useEffect(() => {
     music = new Audio("./typing.wav");
     if (!isTouchDevice()) {
-      if (!start) {
+      if (!start.current) {
         terminalRef.current.innerHTML =
           "<p class='blink'>Press space to continue</p>";
         window.addEventListener("keydown", (key) => {
@@ -129,20 +134,19 @@ export default function Home() {
             type(introduction);
             terminalRef.current.innerHTML = "";
             music.play();
-            start = true;
+            start.current = true;
           }
         });
       }
     } else {
-      if (!start) {
+      if (!start.current) {
         terminalRef.current.innerHTML =
           "<p class='blink'>Touch the screen to continue</p>";
         window.addEventListener("click", () => {
           type(introduction);
           terminalRef.current.innerHTML = "";
           music.play();
-          start = true;
-          console.log(start);
+          start.current = true;
         });
       }
     }
