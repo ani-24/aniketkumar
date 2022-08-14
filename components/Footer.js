@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaCodepen, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <ul className="links-list">
           <li>
             <Link href="/projects">
-              <a>Projects / Works</a>
+              <a>My Projects</a>
             </Link>
           </li>
           <li>
@@ -24,7 +25,16 @@ const Footer = () => {
         <ul className="social-list">
           <li>
             <Link href="https://codepen.io/aniketkr" rel="noreferrer">
-              <a></a>
+              <a>
+                <FaCodepen />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://github.com/ani-24" rel="noreferrer">
+              <a>
+                <FaGithub />
+              </a>
             </Link>
           </li>
         </ul>
