@@ -15,6 +15,12 @@ const Projects = [
     link: "https://satyadevurology.vercel.app/",
     skills: ["html", "sass", "react", "next", "sanity"],
   },
+  {
+    img: "/project-3.png",
+    title: "My Portoflio",
+    link: "https://aniketkumar.vercel.app/",
+    skills: ["html", "sass", "react", "next"],
+  },
 ];
 
 const projects = () => {
