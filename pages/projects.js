@@ -9,7 +9,11 @@ const projects = () => {
         <div className="container">
           <div className="project">
             <div className="project__img">
-              <a href="https://paceinstitute.vercel.app/" target="_blank">
+              <a
+                href="https://paceinstitute.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src="/project-1.png"
                   alt="Pace Institute"
@@ -49,7 +53,11 @@ const projects = () => {
           </div>
           <div className="project">
             <div className="project__img">
-              <a href="https://satyadevurology.vercel.app/" target="_blank">
+              <a
+                href="https://satyadevurology.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src="/project-2.png"
                   alt="Satyadev Super Speciality Hospital"
