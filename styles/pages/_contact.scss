@@ -37,6 +37,8 @@
             font-weight: bold;
             margin-bottom: 10px;
             display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
           }
           .form-input {
             display: block;
@@ -53,6 +55,10 @@
               resize: vertical;
               height: 200px;
             }
+          }
+          small {
+            color: $primary-clr;
+            font-style: italic;
           }
         }
         .submit {
