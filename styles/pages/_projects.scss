@@ -1,0 +1,75 @@
+@use "./../components/" as *;
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+body {
+  background: $bg-clr;
+  font-family: $text-font;
+  color: white;
+}
+
+.projects {
+  .project {
+    width: 100%;
+    padding: 2em;
+    background: $bg-light;
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    &__img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 8 / 5;
+    }
+    &__text {
+      width: 100%;
+      &__btn {
+        color: $primary-clr;
+        text-decoration: none;
+        padding: 10px;
+        margin: 0.5em 0 1.5em 0;
+        border: 1px solid $primary-clr;
+        display: inline-block;
+        font-size: 0.9em;
+        border-radius: 5px;
+        transition: 100ms ease-in-out;
+        &:hover {
+          background: rgba($color: $primary-clr, $alpha: 0.1);
+        }
+      }
+      &__skills {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin-top: 0.5em;
+        &__skill {
+          padding: 0.5em 0.75em;
+          background: $bg-clr;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          &::before {
+            content: "";
+            position: relative;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+          }
+          @each $brand, $clr in $brand-clr {
+            &--#{$brand} {
+              &::before {
+                background: $clr;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include mq(xl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

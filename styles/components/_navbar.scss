@@ -1,0 +1,11 @@
+@use "./../variables/" as *;
+
+.navbar {
+  padding: 1em 0;
+  .logo {
+    font-family: $logo-font;
+    color: $primary-clr;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
