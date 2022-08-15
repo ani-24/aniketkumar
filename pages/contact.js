@@ -49,7 +49,7 @@ const contact = () => {
           "_mwu7W44_eSioJwfN"
         )
         .then((res) => {
-          toast("Email sent!", {
+          toast("Message sent successfully!", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -63,8 +63,7 @@ const contact = () => {
           message.value = "";
         })
         .catch((err) => {
-          toast("Error in sending your email");
-          toast("Email sent!", {
+          toast("Message could not be sent!", {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
