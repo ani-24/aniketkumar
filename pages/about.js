@@ -9,7 +9,7 @@ const about = () => {
       <div className="container center">
         <div>
           <Image src="/site-in-progress.png" height={400} width={400} />
-          <p>Site in Progress</p>
+          <p>About page is Work in Progress</p>
         </div>
       </div>
       <Footer />
