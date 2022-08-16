@@ -4,24 +4,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-img {
-  animation: float 2s infinite alternate linear;
-}
-
-@keyframes float {
-  from {
-    transform: translateY(20px);
+  img {
+    animation: float 2s infinite alternate linear;
   }
-  to {
-    transform: translateY(-20px);
-  }
-}
 
-p {
-  text-align: center;
-  font-size: 3rem;
-  font-family: $logo-font;
-  position: relative;
+  @keyframes float {
+    from {
+      transform: translateY(20px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 3rem;
+    font-family: $logo-font;
+    position: relative;
+  }
 }
