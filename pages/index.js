@@ -110,6 +110,14 @@ export default function Home() {
           }, typeSpeed * 2);
           router.push("/contact");
           p.classList.remove("user-input");
+        } else if (ltr.toLowerCase() == "a") {
+          sentIndex.current = 0;
+          charIndex.current = 0;
+          setTimeout(() => {
+            type(redirecting);
+          }, typeSpeed * 2);
+          router.push("/about");
+          p.classList.remove("user-input");
         }
         if (ltr.toLowerCase() == "backspace") {
           p.classList.remove("value-received");
