@@ -22,16 +22,16 @@ const skills = () => {
         <div className="skills__box">
           <h2 className="skills__box__title">Frontend</h2>
           <div className="skills__box__skills">
-            {Frontend.map((skill) => (
-              <img src={`./${skill}.png`} alt={skill} />
+            {Frontend.map((skill, idx) => (
+              <img src={`./${skill}.png`} alt={skill} key={idx} />
             ))}
           </div>
         </div>
         <div className="skills__box">
           <h2 className="skills__box__title">Backend</h2>
           <div className="skills__box__skills">
-            {Backend.map((skill) => (
-              <img src={`./${skill}.png`} alt={skill} />
+            {Backend.map((skill, idx) => (
+              <img src={`./${skill}.png`} alt={skill} key={idx} />
             ))}
           </div>
         </div>
