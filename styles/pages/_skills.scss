@@ -8,6 +8,7 @@
     background: $bg-light;
     padding: 2em;
     border-radius: 10px;
+    border-top: 5px solid $primary-clr;
     &__title {
       font-family: $logo-font;
       font-weight: lighter;
@@ -27,5 +28,9 @@
   }
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
+    &__box {
+      border-top: none;
+      border-left: 5px solid $primary-clr;
+    }
   }
 }

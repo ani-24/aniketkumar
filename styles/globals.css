@@ -366,6 +366,7 @@ body {
   background: #252525;
   padding: 2em;
   border-radius: 10px;
+  border-top: 5px solid rgb(255, 0, 106);
 }
 .skills__box__title {
   font-family: "Kaushan Script", cursive;
@@ -386,5 +387,9 @@ body {
 @media (min-width: 768px) {
   .skills {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .skills__box {
+    border-top: none;
+    border-left: 5px solid rgb(255, 0, 106);
   }
 }/*# sourceMappingURL=globals.css.map */
