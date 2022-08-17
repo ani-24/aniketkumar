@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -23,7 +25,13 @@ const skills = () => {
           <h2 className="skills__box__title">Frontend</h2>
           <div className="skills__box__skills">
             {Frontend.map((skill, idx) => (
-              <img src={`./${skill}.png`} alt={skill} key={idx} />
+              <Image
+                height={50}
+                width={50}
+                src={`/${skill}.png`}
+                alt={skill}
+                key={idx}
+              />
             ))}
           </div>
         </div>
@@ -31,7 +39,13 @@ const skills = () => {
           <h2 className="skills__box__title">Backend</h2>
           <div className="skills__box__skills">
             {Backend.map((skill, idx) => (
-              <img src={`./${skill}.png`} alt={skill} key={idx} />
+              <Image
+                height={50}
+                width={50}
+                src={`/${skill}.png`}
+                alt={skill}
+                key={idx}
+              />
             ))}
           </div>
         </div>
