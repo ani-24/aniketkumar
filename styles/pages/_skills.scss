@@ -1,0 +1,31 @@
+@use "./../variables/" as *;
+@use "./../abstracts/" as *;
+
+.skills {
+  gap: 30px;
+  display: grid;
+  &__box {
+    background: $bg-light;
+    padding: 2em;
+    border-radius: 10px;
+    &__title {
+      font-family: $logo-font;
+      font-weight: lighter;
+      margin-bottom: 1em;
+      font-size: 2.3rem;
+    }
+    &__skills {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 50px);
+      gap: 30px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  @include mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

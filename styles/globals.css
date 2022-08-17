@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Modeseven";
+  src: url("./../public/font/Modeseven-L3n5.ttf");
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat url("./../../public/bg.jpg") center/cover;
+}
+
+.terminal {
+  width: 1000px;
+  height: 500px;
+  max-height: 75%;
+  max-width: 90%;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  background: rgba(0, 0, 0, 0.3137254902);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  padding: 25px;
+  overflow: auto;
+}
+.terminal::-webkit-scrollbar {
+  width: 0;
+  height: 0.5em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+.terminal:hover::-webkit-scrollbar {
+  width: 0.5em;
+}
+.terminal::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+.terminal::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.terminal p {
+  color: #f8f8f8;
+  font-family: "Modeseven";
+  line-height: 1.5;
+  display: flex;
+}
+.terminal p::before {
+  content: "> ";
+  margin-right: 1em;
+}
+.terminal p.blink {
+  -webkit-animation: blink 700ms infinite alternate;
+          animation: blink 700ms infinite alternate;
+  color: lightgreen;
+}
+.terminal p.user-input {
+  color: lightgreen;
+}
+.terminal p.user-input::after {
+  content: "_";
+  color: lightgreen;
+  -webkit-animation: blinkFull 700ms linear infinite alternate;
+          animation: blinkFull 700ms linear infinite alternate;
+}
+.terminal p.user-input.value-received {
+  color: lightgreen;
+}
+.terminal p.user-input.value-received::after {
+  display: none;
+}
+@-webkit-keyframes blink {
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes blink {
+  to {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes blinkFull {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes blinkFull {
+  to {
+    opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .terminal {
+    font-size: 0.9rem;
+  }
+  .terminal p {
+    line-height: 2;
+  }
+}
+
+.navbar {
+  padding: 1em 0;
+  margin-bottom: 50px;
+}
+.navbar .logo {
+  font-family: "Kaushan Script", cursive;
+  color: rgb(255, 0, 106);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.footer {
+  margin-top: 30px;
+}
+.footer .container {
+  border-top: 1px solid rgba(255, 255, 255, 0.1254901961);
+  padding: 3em 0;
+}
+.footer ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin-bottom: 1em;
+}
+.footer ul.links-list {
+  justify-content: space-around;
+}
+.footer ul.links-list li a {
+  text-decoration: none;
+  color: white;
+  transition: 100ms ease-in-out;
+}
+.footer ul.links-list li a:hover {
+  color: rgb(255, 0, 106);
+}
+.footer ul.social-list {
+  justify-content: center;
+  gap: 1em;
+}
+.footer ul.social-list li {
+  font-size: 1.1rem;
+}
+.footer ul.social-list li a {
+  color: rgb(255, 0, 106);
+}
+
+body {
+  background: #1e1e1e;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.projects .project {
+  width: 100%;
+  padding: 1em;
+  background: #252525;
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.projects .project__img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 8/5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projects .project__text {
+  width: 100%;
+}
+.projects .project__text__btn {
+  color: rgb(255, 0, 106);
+  text-decoration: none;
+  padding: 10px;
+  margin: 0.5em 0 1.5em 0;
+  border: 1px solid rgb(255, 0, 106);
+  display: inline-block;
+  font-size: 0.9em;
+  border-radius: 5px;
+  transition: 100ms ease-in-out;
+}
+.projects .project__text__btn:hover {
+  background: rgba(255, 0, 106, 0.1);
+}
+.projects .project__text__skills {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 0.5em;
+}
+.projects .project__text__skills__skill {
+  padding: 0.5em 0.75em;
+  background: #1e1e1e;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.projects .project__text__skills__skill::before {
+  content: "";
+  position: relative;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.projects .project__text__skills__skill--html::before {
+  background: #e34c26;
+}
+.projects .project__text__skills__skill--sass::before {
+  background: #cf649a;
+}
+.projects .project__text__skills__skill--tailwind::before {
+  background: #0ea5e9;
+}
+.projects .project__text__skills__skill--react::before {
+  background: #61dafb;
+}
+.projects .project__text__skills__skill--next::before {
+  background: #ffffff;
+}
+.projects .project__text__skills__skill--sanity::before {
+  background: #f03e2f;
+}
+@media (min-width: 640px) {
+  .projects .project {
+    padding: 2em;
+  }
+}
+@media (min-width: 1280px) {
+  .projects .project {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact__section {
+  padding: 2rem;
+}
+.contact__section--left {
+  font-size: 0.8rem;
+  background: rgb(255, 0, 106);
+  padding: 3rem;
+}
+.contact__section--left__box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact__section--left__box:not(:last-child) {
+  margin-bottom: 2em;
+}
+.contact__section--left__box .icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  color: #252525;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__section--right {
+  background: #252525;
+}
+.contact__section--right form .input-field {
+  margin-bottom: 30px;
+}
+.contact__section--right form .input-field .form-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+.contact__section--right form .input-field .form-input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  background: #1e1e1e;
+  border: none;
+  border-bottom: 2px solid rgb(255, 0, 106);
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+.contact__section--right form .input-field .form-input.form-textarea {
+  resize: vertical;
+  height: 200px;
+}
+.contact__section--right form .input-field small {
+  color: rgb(255, 0, 106);
+  font-style: italic;
+}
+.contact__section--right form .submit {
+  padding: 0.5em 1em;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  background: rgb(255, 0, 106);
+  color: white;
+  border: 1px solid rgb(255, 0, 106);
+}
+@media (min-width: 1280px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skills {
+  gap: 30px;
+  display: grid;
+}
+.skills__box {
+  background: #252525;
+  padding: 2em;
+  border-radius: 10px;
+}
+.skills__box__title {
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  font-size: 2.3rem;
+}
+.skills__box__skills {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50px);
+  gap: 30px;
+}
+.skills__box__skills img {
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 768px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=globals.css.map */

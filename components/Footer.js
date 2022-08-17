@@ -8,7 +8,7 @@ const Footer = () => {
         <ul className="links-list">
           <li>
             <Link href="/projects">
-              <a>My Projects</a>
+              <a>Projects</a>
             </Link>
           </li>
           <li>
@@ -17,8 +17,8 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link href="about">
-              <a>About me</a>
+            <Link href="skills">
+              <a>Skills</a>
             </Link>
           </li>
         </ul>

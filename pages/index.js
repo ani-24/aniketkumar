@@ -7,7 +7,6 @@ const introduction = [
   "Press: ",
   "- 'p' to view my projects",
   "- 's' to see my skills",
-  "- 'a' to know about me",
   "or",
   "- 'c' to contact me",
 ];
@@ -30,7 +29,7 @@ const skills = [
   "15. Mongoose",
   "16. Firebase",
   "What else would you like to see?",
-  "'s' for skills, 'p' for projects, 'a' to know more about me, or 'c' to contact me",
+  "'s' for skills, 'p' for projects, or 'c' to contact me",
 ];
 
 const redirecting = ["......."];
@@ -50,7 +49,7 @@ export default function Home() {
   const charIndex = useRef(0);
   const sentIndex = useRef(0);
   let music;
-  const typeSpeed = 80;
+  const typeSpeed = 10;
   const router = useRouter();
   let p;
   const type = (sentences) => {
@@ -109,14 +108,6 @@ export default function Home() {
             type(redirecting);
           }, typeSpeed * 2);
           router.push("/contact");
-          p.classList.remove("user-input");
-        } else if (ltr.toLowerCase() == "a") {
-          sentIndex.current = 0;
-          charIndex.current = 0;
-          setTimeout(() => {
-            type(redirecting);
-          }, typeSpeed * 2);
-          router.push("/about");
           p.classList.remove("user-input");
         }
         if (ltr.toLowerCase() == "backspace") {

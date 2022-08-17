@@ -57,6 +57,7 @@
         animation: blinkFull 700ms linear infinite alternate;
       }
       &.value-received {
+        color: lightgreen;
         &::after {
           display: none;
         }
@@ -78,8 +79,5 @@
     p {
       line-height: 2;
     }
-  }
-  @media (max-width: 500px) {
-    font-size: 0.75rem;
   }
 }
