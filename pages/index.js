@@ -49,7 +49,7 @@ export default function Home() {
   const charIndex = useRef(0);
   const sentIndex = useRef(0);
   let music;
-  const typeSpeed = 10;
+  const typeSpeed = 80;
   const router = useRouter();
   let p;
   const type = (sentences) => {
