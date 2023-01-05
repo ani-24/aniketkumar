@@ -18,22 +18,23 @@
     &__skills {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fill, 40px);
-      gap: 30px;
-      img {
-        width: 40px;
-        height: 40px;
-      }
-      @include mq(sm) {
-        grid-template-columns: repeat(auto-fill, 50px);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      &__skill {
+        display: flex;
+        align-items: center;
+        gap: 20px;
         img {
-          height: 50px;
-          width: 50px;
+          width: 40px;
+          height: 40px;
+        }
+        &--name {
+          text-transform: capitalize;
         }
       }
     }
   }
-  @include mq(md) {
+  @include mq(xl) {
     grid-template-columns: repeat(2, 1fr);
     &__box {
       border-top: none;

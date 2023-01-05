@@ -23,7 +23,12 @@ const skills = () => {
           <h2 className="skills__box__title">Frontend</h2>
           <div className="skills__box__skills">
             {Frontend.map((skill, idx) => (
-              <img src={`./${skill}.png`} alt={skill} key={idx} />
+              <div className="skills__box__skills__skill">
+                <img src={`./${skill}.png`} alt={skill} />
+                <span className="skills__box__skills__skill--name">
+                  -- {skill}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -31,7 +36,10 @@ const skills = () => {
           <h2 className="skills__box__title">Backend</h2>
           <div className="skills__box__skills">
             {Backend.map((skill, idx) => (
-              <img src={`./${skill}.png`} alt={skill} key={idx} />
+              <div className="skills__box__skills__skill" key={idx}>
+                <img src={`./${skill}.png`} alt={skill} />
+                <span className="skill--name">-- {skill}</span>
+              </div>
             ))}
           </div>
         </div>
