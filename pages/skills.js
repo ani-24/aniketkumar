@@ -23,7 +23,7 @@ const skills = () => {
           <h2 className="skills__box__title">Frontend</h2>
           <div className="skills__box__skills">
             {Frontend.map((skill, idx) => (
-              <div className="skills__box__skills__skill">
+              <div className="skills__box__skills__skill" key={idx}>
                 <img src={`./${skill}.png`} alt={skill} />
                 <span className="skills__box__skills__skill--name">
                   -- {skill}
