@@ -3,7 +3,9 @@ import Image from "next/image";
 const skillsName = {
   tailwind: "Tailwind CSS",
   html: "HTML",
+  css: "CSS",
   sass: "Sass",
+  js: "Vanilla JS",
   react: "React JS",
   next: "Next JS",
   sanity: "Sanity",
