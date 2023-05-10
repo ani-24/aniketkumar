@@ -17,6 +17,12 @@ const Projects = [
     link: "https://aniketkumar.vercel.app/",
     skills: ["html", "sass", "react", "next"],
   },
+  {
+    img: "/project-4.png",
+    title: "Music Player",
+    link: "https://fluffy-strudel-cebdda.netlify.app/",
+    skills: ["html", "css", "js"],
+  },
 ];
 
 module.exports = Projects;
