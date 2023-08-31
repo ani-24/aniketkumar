@@ -9,6 +9,7 @@ const skillsName = {
   react: "React JS",
   next: "Next JS",
   sanity: "Sanity",
+  wordpress: "Wordpress",
 };
 
 const Project = ({ img, title, link, skills }) => {

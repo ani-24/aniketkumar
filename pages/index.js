@@ -28,6 +28,7 @@ const skills = [
   "14. MongoDB",
   "15. Mongoose",
   "16. Firebase",
+  "17. Wordpress",
   "What else would you like to see?",
   "'s' for skills, 'p' for projects, or 'c' to contact me",
 ];

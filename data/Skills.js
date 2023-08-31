@@ -8,6 +8,7 @@ const Skills = {
     "sass",
     "bootstrap",
     "tailwind",
+    "wordpress",
   ],
   Backend: ["node", "express", "mongodb", "firebase", "php", "mysql"],
 };

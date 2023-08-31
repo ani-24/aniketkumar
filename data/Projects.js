@@ -7,15 +7,21 @@ const Projects = [
   },
   {
     img: "/project-2.png",
-    title: "Satyadev Super Speciality Hospital",
-    link: "https://satyadevurology.vercel.app/",
-    skills: ["html", "sass", "react", "next", "sanity"],
+    title: "Marketing Agency",
+    link: "https://dulcet-gumption-ca7d55.netlify.app/",
+    skills: ["wordpress"],
   },
   {
     img: "/project-3.png",
     title: "My Portoflio",
     link: "https://aniketkumar.vercel.app/",
     skills: ["html", "sass", "react", "next"],
+  },
+  {
+    img: "/project-4.png",
+    title: "Satyadev Super Speciality Hospital",
+    link: "https://satyadevurology.vercel.app/",
+    skills: ["html", "sass", "react", "next", "sanity"],
   },
 ];
 
